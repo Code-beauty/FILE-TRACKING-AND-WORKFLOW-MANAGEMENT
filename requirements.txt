@@ -1,7 +1,7 @@
-import streamlit as st
-import streamlit_authenticator as stauth
-import numpy
-import cv2
-from PIL import Image
-import pandas as pd
-from datetime import datetime
+streamlit==1.17.0
+streamlit-authenticator==0.1.5
+numpy==1.23.5
+opencv-python==4.7.0.68
+opencv-python-headless==4.7.0.72
+pandas==1.5.3
+datetime
