@@ -66,7 +66,7 @@ def qrcode(name):
                 dictionary |= dict2
                 dictionary |= file_dict
                 df=pd.read_excel('datasheet.xlsx')
-                df= df.append(dictionary,ignore_index=True)
+                df = pd.concat([df, pd.DataFrame([dictionary])], ignore_index=True)
                 df.to_excel("datasheet.xlsx", index=False)  
 
 
