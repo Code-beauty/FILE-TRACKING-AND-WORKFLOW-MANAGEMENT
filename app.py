@@ -68,6 +68,13 @@ def qrcode(name):
                 df=pd.read_excel('datasheet.xlsx')
                 df = pd.concat([df, pd.DataFrame([dictionary])], ignore_index=True)
                 df.to_excel("datasheet.xlsx", index=False)  
+                 # Add the Excel sheet downloader
+            st.download_button(
+                label="Download Updated Excel Sheet",
+                data=df.to_excel(),
+                file_name="updated_datasheet.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
 
 
 def login():
