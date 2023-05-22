@@ -69,14 +69,14 @@ def qrcode(name):
                 
                 df=pd.read_excel('datasheet.xlsx')
                 df = pd.concat([df, pd.DataFrame([dictionary])], ignore_index=True)
-y=os.path.basename(os.path.normpath(path))
-new_path = r"updated_datasheet.xls"+y
-writer = pd.ExcelWriter(new_path, engine='xlsxwriter')
-df.to_excel(writer)
+                y=os.path.basename(os.path.normpath(path))
+                new_path = r"updated_datasheet.xls"+y
+                writer = pd.ExcelWriter(new_path, engine='xlsxwriter')
+                df.to_excel(writer)
 
 
                  # Add the Excel sheet downloader
-            st.download_button(
+                st.download_button(
                 label="Download Updated Excel Sheet",
                 data=df.to_excel(),
                 file_name="updated_datasheet.xlsx",
