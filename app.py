@@ -4,6 +4,8 @@ import numpy
 import cv2
 from PIL import Image
 import pandas as pd
+import os
+import xlsxwriter
 from datetime import datetime
 file_dict = {'Scanned By': []}
 def qrcode(name):
