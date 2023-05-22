@@ -71,8 +71,9 @@ def qrcode(name):
                 
                 df=pd.read_excel('datasheet.xlsx')
                 df = pd.concat([df, pd.DataFrame([dictionary])], ignore_index=True)
+                path = "datasheet.xlsx"
                 y=os.path.basename(os.path.normpath(path))
-                new_path = r"updated_datasheet.xls"+y
+                new_path = r"updated_datasheet.xlsx"+y
                 writer = pd.ExcelWriter(new_path, engine='xlsxwriter')
                 df.to_excel(writer)
 
