@@ -77,7 +77,8 @@ def qrcode(name):
                  # Add the Excel sheet downloader
                 st.download_button(
                 label="Download Updated Excel Sheet",
-                data=df.to_excel(),
+                path = "E:\5th Semester\CS"
+                data=path
                 file_name="updated_datasheet.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
